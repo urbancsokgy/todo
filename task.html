@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo in this PC- task</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/7758854a69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu__item"><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li class="menu__item"><a href="index.html">Home</a> </li>
+                <li class="menu__item"><a href="task.html">Task</a></li>
+            </ul>
+        </nav>
+        <h1>Daily To-Do list manager</h1>
+    </header>
+    <main class="wrapper task__content">
+        <div class="todo">
+            <h2>Todo</h2>
+                <p>Git-et használj! A repository-d neve: todo. Case sensitive-en.
+                <img src="./img/todo.gif" alt="minta1">
+                    Egy Teendőlista alkalmazást kell lefejlesztened. Alkalmazás design-ját és működését az alábbi ábrák szemléltetik:</p>
+                <p>A már elvégzett teendők:</p>
+                <img src="./img/todo-conplete.jpg" alt="">
+                <p>Üres teendőlista:</p>
+                <img src="./img/todo-clear.jpg" alt="">
+
+                <ul>
+                    <li>A színeket, ikonokat és a betűtípust szabadon választhatod</li>
+                    <li>A checkboxoknak nem kell egyedi designt készíteni.</li>
+                    <li>Az alkalmazás localStorage-ben tárolja a teendőket.</li>
+                    <li>Az alkalmazás indításkor ellenőrzi vannak-e mentett teendők, ha igen, akkor betölti őket storage-ból.</li>
+                    <li>Felül szerepelnie kell a jelenlegi dátumnak</li>
+                    <li>Az input mező placholdere: Take the garbage out</li>
+                    <li>A plusz jelre kattintva egy animáció kíséretében megjelenik az új teendő a listában, az input tartalma törlődik</li>
+                    <li>A teendő lista feletti mondatban (You have X pending items) látható, hogy szerepel a teendők száma, ez dinamikusan frissüljön mindig</li>
+                    <li>H egy teendő fölő visszük a kurzort, egy animáció kíséretében megjelenik a kuka ikon, amire kattintva törlődik a teendő</li>
+                    <li>A teendő előtti checkboxot bejelölve az adott teendő elvégzett lesz, a listáról eltűnik</li>
+                    <li>A Show/Hide Complete szövegre kattintva lehet megjeleníteni/elrejteni a már elvégzett teendőket</li>
+                    <li>A Clear All-ra kattintva a még el nem végzett összes teendő törlésre kerül</li>
+                </ul>
+
+       </div>
+    </main>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

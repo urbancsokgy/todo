@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo in this PC</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    
+</head>
+<body>
+    <nav class="nav">
+        <ul class="menu">
+            <li class="menu__item"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li class="menu__item"><a href="index.html">Home</a> </li>
+            <li class="menu__item"><a href="task.html">Task</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Daily To-Do list manager</h1>
+    </header>
+    <main class="wrapper">
+        <div class="todo">
+            <h2>Óra</h2>
+            <div class="input__wrap">
+                <input type="text" class="input__todo input--face" placeholder="Take the garbage out">
+                <button class="input__button input--face">+</button>
+            </div>
+            <div class="todo__list__now">
+                <ul>
+                </ul>
+            </div>
+
+            <div class="between hidden">                
+                <div class="complete">Hide Complete</div>
+                <div class="clear">Clear All</div>
+            </div>
+
+            <div class=" todo__checked">
+               <ul>               
+               </ul>
+            </div>
+
+            <div class="timeToChill">
+                <center>
+                <i class="fas fa-glass-cheers"></i>
+                </center>
+                <h2>Time to chill! You have no todos.</h2>
+            </div>
+        </div>
+    </main>
+
+<script src="./js/main.js"></script>
+<script src="./js/fontawesome.min.js"></script>
+<script src="https://kit.fontawesome.com/7758854a69.js" crossorigin="anonymous"></script>
+</body>
+</html>
