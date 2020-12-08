@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,700;1,400&display=swap');
 *{box-sizing: border-box;}
 :root {
-    --bgColor: #b63e0e;
+    --bgColor: #b3f595;
     --hoverColor: #616264;
-    --fgColor: #e77f7f;
+    --fgColor: #eea66b;
     --menuColor: #2f2f31;
     --textColor: #ffffff;
     --divWidth: 80vw;
@@ -128,11 +128,11 @@ header{
     text-decoration: line-through;
 }
 .visible{
-   display: none;
-    visibility: visible;   
+  
+    visibility: inherit;   
 }
 .hidden{
-    /* display: none; */
+  
     visibility: hidden;
 }   
 .fa-square, .fa-check-square {
@@ -142,7 +142,8 @@ header{
     background-color: rgb(241, 67, 67);
     padding: .5rem;
     border-radius: .2rem;
-    /* visibility: hidden; */
+    scale: 0 1;
+    visibility: hidden;
 }
 .fa-glass-cheers{
     font-size: 3rem;
@@ -158,5 +159,10 @@ header{
     justify-content: space-evenly;
     font-size: 1rem;
     font-weight: 700;
+}
+.isanitem:hover .fa-trash-alt{
+    scale: 1 1;
+    transition:  all 1s ease-in-out;
+    visibility: inherit;
 }
 
