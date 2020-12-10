@@ -22,12 +22,14 @@ const todoNow=document.querySelector('.input__todo');
 const plusButton=document.querySelector('.input__button');
 const listItem=document.querySelector('.todo__list__now ul');
 plusButton.addEventListener('click', event =>addTodo(event));
+
 //click function
 
 function addTodo(event){
     keyNumber++;
     let key=`item${keyNumber}`;
     appendList(key ,todoNow.value);
+    listLength();
     todoNow.value='';
 
 }
@@ -45,6 +47,7 @@ let templateString=
 <i class="fas fa-trash-alt"></i>
 </div>`
  listItem.innerHTML+=templateString;
+ listLength();
  trashClick();
  checkItem();
 
@@ -59,6 +62,7 @@ trashNode.forEach(element => {
         event.target.parentElement.remove();
         (document.querySelector('.todo__list__now ul').nextElementSibling==null)?
         document.querySelector('.timeToChill').classList.add('hidden'):'';
+        listLength();
     })
 });
 }
@@ -71,6 +75,7 @@ boxNode.forEach(element => {
         let itemValue =event.target.nextElementSibling.textContent;
         transfer(itemValue);
         event.target.parentElement.remove();
+        listLength();
     })
 });
 }
@@ -83,6 +88,7 @@ function transfer(value){
     <li class="li__item">${value}</li>
     </div>`
     document.querySelector('.todo__checked ul').innerHTML+=templateString1;
+   
 }
 //#endregion
 
@@ -105,6 +111,7 @@ document.querySelector('.complete').addEventListener('click', event=>
         remNodeList.forEach(el=>el.remove());
         document.querySelector('.between').classList.add('hidden');
         document.querySelector('.timeToChill').classList.toggle('hidden');
+        listLength();
     })
     //#endregion
     //#region Lap elhagyása és onload
@@ -145,4 +152,10 @@ document.querySelector('.complete').addEventListener('click', event=>
         }
     }}
     //#endregion
-    
+    // Lista hosszának lekérése
+    let  listLength=()=>{        
+        let length =document.querySelectorAll('.todo__list__now li').length;
+        (length>0)?
+        document.querySelector('.list__length').textContent=`Még ${length} teendőd van.`
+        :document.querySelector('.list__length').textContent="Nincs egy feladat sem.";
+    }
